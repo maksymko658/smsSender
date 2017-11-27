@@ -6,6 +6,14 @@
 	<title>Node SMS</title>
 </head>
 <body>
-	
+	<div class="container">
+		<h2>TYKTYK</h2>
+		<input type="tel" name="number" id="number" placeholder="Enter number..">	
+		<input type="text" name="msg" id="msg" placeholder="Enter message">	
+		<input type="button" id="button" value="Send Text" class="button button-primary">
+		<p class="response"></p>	
+	</div>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
