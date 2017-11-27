@@ -14,7 +14,10 @@ app.use(express.static(__dirname + '/public'));
 //Body parser middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+//Index route
+app.get('/', (req, res) => {
+	res.render('index');
+});
 //Define port
 const port = 3000;
 
