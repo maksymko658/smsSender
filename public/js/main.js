@@ -1,10 +1,10 @@
-const numberInput = document.getElemntById('number'),
- textInput = document.getElemntById('msg'),
- button = document.getElemntById('button'),
- response = document.querySelector('.response');
+const numberInput = document.getElementById('number'),
+      textInput = document.getElementById('msg'),
+      button = document.getElementById('button'),
+      response = document.querySelector('.response');
 
+button.addEventListener('click', send, false);
 
- button.addEventListener('click', send, false);
 
  function send(){
  	const number = numberInput.value.replace(/\D/g, '')
@@ -19,7 +19,7 @@ const numberInput = document.getElemntById('number'),
  	})
  	//To get response
  	//Wi will use promise
- 	.then(function(response){
+ 	.then(function(res){
  		console.log(res);
  	})
  	.catch(function(err){
