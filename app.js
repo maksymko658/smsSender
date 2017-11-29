@@ -4,6 +4,12 @@ const ejs = require('ejs');
 const Nexmo = require('nexmo');
 const socketio = require('socket.io');
 
+//Init Nexmo
+const nexmo = new Nexmo({
+	apiKey: 'b9b2562b',
+	apiSecret: '4c0c6fdd48ca10ec'
+}, {debug: true});
+
 //Init app
 const app = express();
 
