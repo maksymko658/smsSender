@@ -15,6 +15,6 @@ const numberInput = document.getElemntById('number'),
  		headers: {
  			'Content-type': 'application/json'
  		},
- 		body: {JSON.stringify({number: number, text: text})}
+ 		body: JSON.stringify({number: number, text: text})
  	})
  }
