@@ -17,4 +17,12 @@ const numberInput = document.getElemntById('number'),
  		},
  		body: JSON.stringify({number: number, text: text})
  	})
+ 	//To get response
+ 	//Wi will use promise
+ 	.then(function(response){
+ 		console.log(res);
+ 	})
+ 	.catch(function(err){
+ 		console.log(err);
+ 	})
  }
