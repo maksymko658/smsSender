@@ -30,8 +30,22 @@ app.get('/', (req, res) => {
 });
 //Catch form submit
 app.post('/', (req, res) => {
-	res.send(req.body);
-	console.log(req.body);
+	// res.send(req.body);
+	// console.log(req.body);
+	const number = req.body.number;
+	const text = req.body.text;
+
+	nexmo.message.sendSms(
+		'380936684809', number, text, { type: 'unicode' },
+		(err, responseData) => {
+			if(err){
+				console.log(err);
+
+			}else {
+				console.dir(responseData);
+			}
+		}
+		)
 })
 
 //Define port
